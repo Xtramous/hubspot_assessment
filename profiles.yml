@@ -1,0 +1,15 @@
+hubspot_ae_assessment:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: ypregvq-lw14061         
+      user: ******
+      password: *******
+      role: ACCOUNTADMIN
+      schema : PUBLIC
+      database: HUBSPOT_AE_ASSESSMENT
+      warehouse: COMPUTE_HS
+      threads: 4
+      client_session_keep_alive: false
+
