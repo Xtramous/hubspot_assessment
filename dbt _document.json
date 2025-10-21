@@ -1,0 +1,951 @@
+	
+metadata	
+dbt_schema_version	"https://schemas.getdbt.com/dbt/catalog/v1.json"
+dbt_version	"1.11.0b3"
+generated_at	"2025-10-21T19:53:02.897220Z"
+invocation_id	"fd429137-e437-49ee-9a8b-86eaa91fa520"
+invocation_started_at	"2025-10-21T19:52:52.425382Z"
+env	{}
+nodes	
+model.hubspot_ae_assessment.stg_calendar	
+metadata	
+type	"BASE TABLE"
+schema	"PUBLIC_STAGE"
+name	"STG_CALENDAR"
+database	"HUBSPOT_AE_ASSESSMENT"
+comment	null
+owner	"ACCOUNTADMIN"
+columns	
+LISTING_ID	
+type	"NUMBER"
+index	1
+name	"LISTING_ID"
+comment	null
+DATE	
+type	"DATE"
+index	2
+name	"DATE"
+comment	null
+AVAILABLE	
+type	"BOOLEAN"
+index	3
+name	"AVAILABLE"
+comment	null
+RESERVATION_ID	
+type	"NUMBER"
+index	4
+name	"RESERVATION_ID"
+comment	null
+PRICE	
+type	"FLOAT"
+index	5
+name	"PRICE"
+comment	null
+MINIMUM_NIGHTS	
+type	"NUMBER"
+index	6
+name	"MINIMUM_NIGHTS"
+comment	null
+MAXIMUM_NIGHTS	
+type	"NUMBER"
+index	7
+name	"MAXIMUM_NIGHTS"
+comment	null
+stats	
+bytes	
+id	"bytes"
+label	"Approximate Size"
+value	95232
+include	true
+description	"Approximate size of the table as reported by Snowflake"
+row_count	
+id	"row_count"
+label	"Row Count"
+value	18250
+include	true
+description	"An approximate count of rows in this table"
+last_modified	
+id	"last_modified"
+label	"Last Modified"
+value	"2025-10-20 20:53UTC"
+include	true
+description	"The timestamp for last update/change"
+has_stats	
+id	"has_stats"
+label	"Has Stats?"
+value	true
+include	false
+description	"Indicates whether there are statistics for this table"
+unique_id	"model.hubspot_ae_assessment.stg_calendar"
+model.hubspot_ae_assessment.stg_listings	
+metadata	
+type	"BASE TABLE"
+schema	"PUBLIC_STAGE"
+name	"STG_LISTINGS"
+database	"HUBSPOT_AE_ASSESSMENT"
+comment	null
+owner	"ACCOUNTADMIN"
+columns	
+LISTING_ID	
+type	"NUMBER"
+index	1
+name	"LISTING_ID"
+comment	null
+LISTING_NAME	
+type	"TEXT"
+index	2
+name	"LISTING_NAME"
+comment	null
+HOST_ID	
+type	"NUMBER"
+index	3
+name	"HOST_ID"
+comment	null
+HOST_NAME	
+type	"TEXT"
+index	4
+name	"HOST_NAME"
+comment	null
+HOST_SINCE	
+type	"DATE"
+index	5
+name	"HOST_SINCE"
+comment	null
+NEIGHBORHOOD	
+type	"TEXT"
+index	6
+name	"NEIGHBORHOOD"
+comment	null
+PROPERTY_TYPE	
+type	"TEXT"
+index	7
+name	"PROPERTY_TYPE"
+comment	null
+ROOM_TYPE	
+type	"TEXT"
+index	8
+name	"ROOM_TYPE"
+comment	null
+ACCOMMODATES	
+type	"NUMBER"
+index	9
+name	"ACCOMMODATES"
+comment	null
+PRICE	
+type	"FLOAT"
+index	10
+name	"PRICE"
+comment	null
+NUMBER_OF_REVIEWS	
+type	"NUMBER"
+index	11
+name	"NUMBER_OF_REVIEWS"
+comment	null
+FIRST_REVIEW_DATE	
+type	"DATE"
+index	12
+name	"FIRST_REVIEW_DATE"
+comment	null
+LAST_REVIEW_DATE	
+type	"DATE"
+index	13
+name	"LAST_REVIEW_DATE"
+comment	null
+REVIEW_SCORES_RATING	
+type	"FLOAT"
+index	14
+name	"REVIEW_SCORES_RATING"
+comment	null
+AMENITIES	
+type	"TEXT"
+index	15
+name	"AMENITIES"
+comment	null
+stats	
+bytes	
+id	"bytes"
+label	"Approximate Size"
+value	12288
+include	true
+description	"Approximate size of the table as reported by Snowflake"
+row_count	
+id	"row_count"
+label	"Row Count"
+value	50
+include	true
+description	"An approximate count of rows in this table"
+last_modified	
+id	"last_modified"
+label	"Last Modified"
+value	"2025-10-20 20:53UTC"
+include	true
+description	"The timestamp for last update/change"
+has_stats	
+id	"has_stats"
+label	"Has Stats?"
+value	true
+include	false
+description	"Indicates whether there are statistics for this table"
+unique_id	"model.hubspot_ae_assessment.stg_listings"
+model.hubspot_ae_assessment.stg_amenities_changelog	
+metadata	
+type	"BASE TABLE"
+schema	"PUBLIC_STAGE"
+name	"STG_AMENITIES_CHANGELOG"
+database	"HUBSPOT_AE_ASSESSMENT"
+comment	null
+owner	"ACCOUNTADMIN"
+columns	
+LISTING_ID	
+type	"NUMBER"
+index	1
+name	"LISTING_ID"
+comment	null
+CHANGE_AT	
+type	"TIMESTAMP_NTZ"
+index	2
+name	"CHANGE_AT"
+comment	null
+AMENITIES	
+type	"TEXT"
+index	3
+name	"AMENITIES"
+comment	null
+stats	
+bytes	
+id	"bytes"
+label	"Approximate Size"
+value	7168
+include	true
+description	"Approximate size of the table as reported by Snowflake"
+row_count	
+id	"row_count"
+label	"Row Count"
+value	100
+include	true
+description	"An approximate count of rows in this table"
+last_modified	
+id	"last_modified"
+label	"Last Modified"
+value	"2025-10-20 20:53UTC"
+include	true
+description	"The timestamp for last update/change"
+has_stats	
+id	"has_stats"
+label	"Has Stats?"
+value	true
+include	false
+description	"Indicates whether there are statistics for this table"
+unique_id	"model.hubspot_ae_assessment.stg_amenities_changelog"
+model.hubspot_ae_assessment.stg_generated_reviews	
+metadata	
+type	"BASE TABLE"
+schema	"PUBLIC_STAGE"
+name	"STG_GENERATED_REVIEWS"
+database	"HUBSPOT_AE_ASSESSMENT"
+comment	null
+owner	"ACCOUNTADMIN"
+columns	
+REVIEW_ID	
+type	"NUMBER"
+index	1
+name	"REVIEW_ID"
+comment	null
+LISTING_ID	
+type	"NUMBER"
+index	2
+name	"LISTING_ID"
+comment	null
+REVIEW_SCORE	
+type	"NUMBER"
+index	3
+name	"REVIEW_SCORE"
+comment	null
+REVIEW_DATE	
+type	"DATE"
+index	4
+name	"REVIEW_DATE"
+comment	null
+stats	
+bytes	
+id	"bytes"
+label	"Approximate Size"
+value	28672
+include	true
+description	"Approximate size of the table as reported by Snowflake"
+row_count	
+id	"row_count"
+label	"Row Count"
+value	5834
+include	true
+description	"An approximate count of rows in this table"
+last_modified	
+id	"last_modified"
+label	"Last Modified"
+value	"2025-10-20 20:53UTC"
+include	true
+description	"The timestamp for last update/change"
+has_stats	
+id	"has_stats"
+label	"Has Stats?"
+value	true
+include	false
+description	"Indicates whether there are statistics for this table"
+unique_id	"model.hubspot_ae_assessment.stg_generated_reviews"
+model.hubspot_ae_assessment.int_listings_enriched	
+metadata	
+type	"BASE TABLE"
+schema	"PUBLIC_INTERMEDIATE"
+name	"INT_LISTINGS_ENRICHED"
+database	"HUBSPOT_AE_ASSESSMENT"
+comment	null
+owner	"ACCOUNTADMIN"
+columns	
+LISTING_ID	
+type	"NUMBER"
+index	1
+name	"LISTING_ID"
+comment	null
+LISTING_NAME	
+type	"TEXT"
+index	2
+name	"LISTING_NAME"
+comment	null
+NEIGHBORHOOD	
+type	"TEXT"
+index	3
+name	"NEIGHBORHOOD"
+comment	null
+PROPERTY_TYPE	
+type	"TEXT"
+index	4
+name	"PROPERTY_TYPE"
+comment	null
+ROOM_TYPE	
+type	"TEXT"
+index	5
+name	"ROOM_TYPE"
+comment	null
+ACCOMMODATES	
+type	"NUMBER"
+index	6
+name	"ACCOMMODATES"
+comment	null
+BASE_PRICE	
+type	"FLOAT"
+index	7
+name	"BASE_PRICE"
+comment	null
+REVIEW_SCORE_RATING	
+type	"FLOAT"
+index	8
+name	"REVIEW_SCORE_RATING"
+comment	null
+AVG_REVIEW_SCORE	
+type	"NUMBER"
+index	9
+name	"AVG_REVIEW_SCORE"
+comment	null
+TOTAL_REVIEWS	
+type	"NUMBER"
+index	10
+name	"TOTAL_REVIEWS"
+comment	null
+AMENITIES	
+type	"TEXT"
+index	11
+name	"AMENITIES"
+comment	null
+LAST_AMENITIES_UPDATE	
+type	"TIMESTAMP_NTZ"
+index	12
+name	"LAST_AMENITIES_UPDATE"
+comment	null
+stats	
+bytes	
+id	"bytes"
+label	"Approximate Size"
+value	11264
+include	true
+description	"Approximate size of the table as reported by Snowflake"
+row_count	
+id	"row_count"
+label	"Row Count"
+value	50
+include	true
+description	"An approximate count of rows in this table"
+last_modified	
+id	"last_modified"
+label	"Last Modified"
+value	"2025-10-20 20:53UTC"
+include	true
+description	"The timestamp for last update/change"
+has_stats	
+id	"has_stats"
+label	"Has Stats?"
+value	true
+include	false
+description	"Indicates whether there are statistics for this table"
+unique_id	"model.hubspot_ae_assessment.int_listings_enriched"
+model.hubspot_ae_assessment.int_reviews_with_scores	
+metadata	
+type	"BASE TABLE"
+schema	"PUBLIC_INTERMEDIATE"
+name	"INT_REVIEWS_WITH_SCORES"
+database	"HUBSPOT_AE_ASSESSMENT"
+comment	null
+owner	"ACCOUNTADMIN"
+columns	
+LISTING_ID	
+type	"NUMBER"
+index	1
+name	"LISTING_ID"
+comment	null
+TOTAL_REVIEWS	
+type	"NUMBER"
+index	2
+name	"TOTAL_REVIEWS"
+comment	null
+AVG_REVIEW_SCORE	
+type	"NUMBER"
+index	3
+name	"AVG_REVIEW_SCORE"
+comment	null
+stats	
+bytes	
+id	"bytes"
+label	"Approximate Size"
+value	2048
+include	true
+description	"Approximate size of the table as reported by Snowflake"
+row_count	
+id	"row_count"
+label	"Row Count"
+value	50
+include	true
+description	"An approximate count of rows in this table"
+last_modified	
+id	"last_modified"
+label	"Last Modified"
+value	"2025-10-20 20:53UTC"
+include	true
+description	"The timestamp for last update/change"
+has_stats	
+id	"has_stats"
+label	"Has Stats?"
+value	true
+include	false
+description	"Indicates whether there are statistics for this table"
+unique_id	"model.hubspot_ae_assessment.int_reviews_with_scores"
+seed.hubspot_ae_assessment.amenities_changelog	
+metadata	
+type	"BASE TABLE"
+schema	"PUBLIC_SEED"
+name	"AMENITIES_CHANGELOG"
+database	"HUBSPOT_AE_ASSESSMENT"
+comment	null
+owner	"ACCOUNTADMIN"
+columns	
+LISTING_ID	
+type	"NUMBER"
+index	1
+name	"LISTING_ID"
+comment	null
+CHANGE_AT	
+type	"TEXT"
+index	2
+name	"CHANGE_AT"
+comment	null
+AMENITIES	
+type	"TEXT"
+index	3
+name	"AMENITIES"
+comment	null
+stats	
+bytes	
+id	"bytes"
+label	"Approximate Size"
+value	7168
+include	true
+description	"Approximate size of the table as reported by Snowflake"
+row_count	
+id	"row_count"
+label	"Row Count"
+value	100
+include	true
+description	"An approximate count of rows in this table"
+last_modified	
+id	"last_modified"
+label	"Last Modified"
+value	"2025-10-19 11:32UTC"
+include	true
+description	"The timestamp for last update/change"
+has_stats	
+id	"has_stats"
+label	"Has Stats?"
+value	true
+include	false
+description	"Indicates whether there are statistics for this table"
+unique_id	"seed.hubspot_ae_assessment.amenities_changelog"
+model.hubspot_ae_assessment.fct_listing_daily_metrics	
+metadata	
+type	"BASE TABLE"
+schema	"PUBLIC_PROD"
+name	"FCT_LISTING_DAILY_METRICS"
+database	"HUBSPOT_AE_ASSESSMENT"
+comment	null
+owner	"ACCOUNTADMIN"
+columns	
+LISTING_ID	
+type	"NUMBER"
+index	1
+name	"LISTING_ID"
+comment	null
+DATE	
+type	"DATE"
+index	2
+name	"DATE"
+comment	null
+NEIGHBORHOOD	
+type	"TEXT"
+index	3
+name	"NEIGHBORHOOD"
+comment	null
+PROPERTY_TYPE	
+type	"TEXT"
+index	4
+name	"PROPERTY_TYPE"
+comment	null
+ROOM_TYPE	
+type	"TEXT"
+index	5
+name	"ROOM_TYPE"
+comment	null
+ACCOMMODATES	
+type	"NUMBER"
+index	6
+name	"ACCOMMODATES"
+comment	null
+BASE_PRICE	
+type	"FLOAT"
+index	7
+name	"BASE_PRICE"
+comment	null
+DAILY_PRICE	
+type	"FLOAT"
+index	8
+name	"DAILY_PRICE"
+comment	null
+IS_AVAILABLE	
+type	"NUMBER"
+index	9
+name	"IS_AVAILABLE"
+comment	null
+IS_BOOKED	
+type	"NUMBER"
+index	10
+name	"IS_BOOKED"
+comment	null
+DAILY_REVENUE	
+type	"FLOAT"
+index	11
+name	"DAILY_REVENUE"
+comment	null
+REVIEW_SCORE_RATING	
+type	"FLOAT"
+index	12
+name	"REVIEW_SCORE_RATING"
+comment	null
+AVG_REVIEW_SCORE	
+type	"NUMBER"
+index	13
+name	"AVG_REVIEW_SCORE"
+comment	null
+TOTAL_REVIEWS	
+type	"NUMBER"
+index	14
+name	"TOTAL_REVIEWS"
+comment	null
+AMENITIES	
+type	"TEXT"
+index	15
+name	"AMENITIES"
+comment	null
+LAST_AMENITIES_UPDATE	
+type	"TIMESTAMP_NTZ"
+index	16
+name	"LAST_AMENITIES_UPDATE"
+comment	null
+OCCUPANCY_RATIO	
+type	"NUMBER"
+index	17
+name	"OCCUPANCY_RATIO"
+comment	null
+MAXIMUM_NIGHTS	
+type	"NUMBER"
+index	18
+name	"MAXIMUM_NIGHTS"
+comment	null
+MINIMUM_NIGHTS	
+type	"NUMBER"
+index	19
+name	"MINIMUM_NIGHTS"
+comment	null
+stats	
+bytes	
+id	"bytes"
+label	"Approximate Size"
+value	685568
+include	true
+description	"Approximate size of the table as reported by Snowflake"
+row_count	
+id	"row_count"
+label	"Row Count"
+value	18250
+include	true
+description	"An approximate count of rows in this table"
+last_modified	
+id	"last_modified"
+label	"Last Modified"
+value	"2025-10-20 20:53UTC"
+include	true
+description	"The timestamp for last update/change"
+has_stats	
+id	"has_stats"
+label	"Has Stats?"
+value	true
+include	false
+description	"Indicates whether there are statistics for this table"
+unique_id	"model.hubspot_ae_assessment.fct_listing_daily_metrics"
+model.hubspot_ae_assessment.int_calendar_enriched	
+metadata	
+type	"BASE TABLE"
+schema	"PUBLIC_INTERMEDIATE"
+name	"INT_CALENDAR_ENRICHED"
+database	"HUBSPOT_AE_ASSESSMENT"
+comment	null
+owner	"ACCOUNTADMIN"
+columns	
+LISTING_ID	
+type	"NUMBER"
+index	1
+name	"LISTING_ID"
+comment	null
+DATE	
+type	"DATE"
+index	2
+name	"DATE"
+comment	null
+IS_AVAILABLE	
+type	"BOOLEAN"
+index	3
+name	"IS_AVAILABLE"
+comment	null
+IS_RESERVED	
+type	"BOOLEAN"
+index	4
+name	"IS_RESERVED"
+comment	null
+DAILY_PRICE	
+type	"FLOAT"
+index	5
+name	"DAILY_PRICE"
+comment	null
+MINIMUM_NIGHTS	
+type	"NUMBER"
+index	6
+name	"MINIMUM_NIGHTS"
+comment	null
+MAXIMUM_NIGHTS	
+type	"NUMBER"
+index	7
+name	"MAXIMUM_NIGHTS"
+comment	null
+stats	
+bytes	
+id	"bytes"
+label	"Approximate Size"
+value	81920
+include	true
+description	"Approximate size of the table as reported by Snowflake"
+row_count	
+id	"row_count"
+label	"Row Count"
+value	18250
+include	true
+description	"An approximate count of rows in this table"
+last_modified	
+id	"last_modified"
+label	"Last Modified"
+value	"2025-10-20 20:53UTC"
+include	true
+description	"The timestamp for last update/change"
+has_stats	
+id	"has_stats"
+label	"Has Stats?"
+value	true
+include	false
+description	"Indicates whether there are statistics for this table"
+unique_id	"model.hubspot_ae_assessment.int_calendar_enriched"
+seed.hubspot_ae_assessment.calendar	
+metadata	
+type	"BASE TABLE"
+schema	"PUBLIC_SEED"
+name	"CALENDAR"
+database	"HUBSPOT_AE_ASSESSMENT"
+comment	null
+owner	"ACCOUNTADMIN"
+columns	
+LISTING_ID	
+type	"NUMBER"
+index	1
+name	"LISTING_ID"
+comment	null
+DATE	
+type	"DATE"
+index	2
+name	"DATE"
+comment	null
+AVAILABLE	
+type	"TEXT"
+index	3
+name	"AVAILABLE"
+comment	null
+RESERVATION_ID	
+type	"NUMBER"
+index	4
+name	"RESERVATION_ID"
+comment	null
+PRICE	
+type	"NUMBER"
+index	5
+name	"PRICE"
+comment	null
+MINIMUM_NIGHTS	
+type	"NUMBER"
+index	6
+name	"MINIMUM_NIGHTS"
+comment	null
+MAXIMUM_NIGHTS	
+type	"NUMBER"
+index	7
+name	"MAXIMUM_NIGHTS"
+comment	null
+stats	
+bytes	
+id	"bytes"
+label	"Approximate Size"
+value	93696
+include	true
+description	"Approximate size of the table as reported by Snowflake"
+row_count	
+id	"row_count"
+label	"Row Count"
+value	18250
+include	true
+description	"An approximate count of rows in this table"
+last_modified	
+id	"last_modified"
+label	"Last Modified"
+value	"2025-10-19 11:32UTC"
+include	true
+description	"The timestamp for last update/change"
+has_stats	
+id	"has_stats"
+label	"Has Stats?"
+value	true
+include	false
+description	"Indicates whether there are statistics for this table"
+unique_id	"seed.hubspot_ae_assessment.calendar"
+seed.hubspot_ae_assessment.generated_reviews	
+metadata	
+type	"BASE TABLE"
+schema	"PUBLIC_SEED"
+name	"GENERATED_REVIEWS"
+database	"HUBSPOT_AE_ASSESSMENT"
+comment	null
+owner	"ACCOUNTADMIN"
+columns	
+ID	
+type	"NUMBER"
+index	1
+name	"ID"
+comment	null
+LISTING_ID	
+type	"NUMBER"
+index	2
+name	"LISTING_ID"
+comment	null
+REVIEW_SCORE	
+type	"NUMBER"
+index	3
+name	"REVIEW_SCORE"
+comment	null
+REVIEW_DATE	
+type	"DATE"
+index	4
+name	"REVIEW_DATE"
+comment	null
+stats	
+bytes	
+id	"bytes"
+label	"Approximate Size"
+value	28672
+include	true
+description	"Approximate size of the table as reported by Snowflake"
+row_count	
+id	"row_count"
+label	"Row Count"
+value	5834
+include	true
+description	"An approximate count of rows in this table"
+last_modified	
+id	"last_modified"
+label	"Last Modified"
+value	"2025-10-19 11:32UTC"
+include	true
+description	"The timestamp for last update/change"
+has_stats	
+id	"has_stats"
+label	"Has Stats?"
+value	true
+include	false
+description	"Indicates whether there are statistics for this table"
+unique_id	"seed.hubspot_ae_assessment.generated_reviews"
+seed.hubspot_ae_assessment.listings	
+metadata	
+type	"BASE TABLE"
+schema	"PUBLIC_SEED"
+name	"LISTINGS"
+database	"HUBSPOT_AE_ASSESSMENT"
+comment	null
+owner	"ACCOUNTADMIN"
+columns	
+ID	
+type	"NUMBER"
+index	1
+name	"ID"
+comment	null
+NAME	
+type	"TEXT"
+index	2
+name	"NAME"
+comment	null
+HOST_ID	
+type	"NUMBER"
+index	3
+name	"HOST_ID"
+comment	null
+HOST_NAME	
+type	"TEXT"
+index	4
+name	"HOST_NAME"
+comment	null
+HOST_SINCE	
+type	"TEXT"
+index	5
+name	"HOST_SINCE"
+comment	null
+HOST_LOCATION	
+type	"TEXT"
+index	6
+name	"HOST_LOCATION"
+comment	null
+HOST_VERIFICATIONS	
+type	"TEXT"
+index	7
+name	"HOST_VERIFICATIONS"
+comment	null
+NEIGHBORHOOD	
+type	"TEXT"
+index	8
+name	"NEIGHBORHOOD"
+comment	null
+PROPERTY_TYPE	
+type	"TEXT"
+index	9
+name	"PROPERTY_TYPE"
+comment	null
+ROOM_TYPE	
+type	"TEXT"
+index	10
+name	"ROOM_TYPE"
+comment	null
+ACCOMMODATES	
+type	"NUMBER"
+index	11
+name	"ACCOMMODATES"
+comment	null
+BATHROOMS_TEXT	
+type	"TEXT"
+index	12
+name	"BATHROOMS_TEXT"
+comment	null
+BEDROOMS	
+type	"NUMBER"
+index	13
+name	"BEDROOMS"
+comment	null
+BEDS	
+type	"NUMBER"
+index	14
+name	"BEDS"
+comment	null
+AMENITIES	
+type	"TEXT"
+index	15
+name	"AMENITIES"
+comment	null
+PRICE	
+type	"NUMBER"
+index	16
+name	"PRICE"
+comment	null
+NUMBER_OF_REVIEWS	
+type	"NUMBER"
+index	17
+name	"NUMBER_OF_REVIEWS"
+comment	null
+FIRST_REVIEW	
+type	"DATE"
+index	18
+name	"FIRST_REVIEW"
+comment	null
+LAST_REVIEW	
+type	"DATE"
+index	19
+name	"LAST_REVIEW"
+comment	null
+REVIEW_SCORES_RATING	
+type	"FLOAT"
+index	20
+name	"REVIEW_SCORES_RATING"
+comment	null
+stats	
+bytes	
+id	"bytes"
+label	"Approximate Size"
+value	14848
+include	true
+description	"Approximate size of the table as reported by Snowflake"
+row_count	
+id	"row_count"
+label	"Row Count"
+value	50
+include	true
+description	"An approximate count of rows in this table"
+last_modified	
+id	"last_modified"
+label	"Last Modified"
+value	"2025-10-19 11:32UTC"
+include	true
+description	"The timestamp for last update/change"
+has_stats	
+id	"has_stats"
+label	"Has Stats?"
+value	true
+include	false
+description	"Indicates whether there are statistics for this table"
+unique_id	"seed.hubspot_ae_assessment.listings"
+sources	{}
+errors	null
