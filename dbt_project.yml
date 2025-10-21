@@ -1,0 +1,35 @@
+name: 'hubspot_ae_assessment'
+version: '1.0.0'
+
+profile: 'hubspot_ae_assessment'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+analysis-paths: ["analyses"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+test-paths: ["tests"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+#Default configuration for seeds
+seeds:
+  hubspot_ae_assessment:
+    +database: HUBSPOT_AE_ASSESSMENT
+    +schema: SEED     
+    +quote_columns: false
+
+# Default configuration for models
+models:
+  hubspot_ae_assessment:
+    staging:
+      +schema: STAGE       
+      +materialized: table
+    prod:
+      +schema: PROD     
+      +materialized: table
+    intermediate:
+      +schema: INTERMEDIATE
+      +materialized: table
