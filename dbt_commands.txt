@@ -1,0 +1,39 @@
+Command	Purpose / When to Use
+dbt init	 ==> Initialize a new dbt project (creates folder structure and dbt_project.yml)
+dbt debug	 ==> Check if dbt is properly configured (profiles.yml, connection, etc.)
+dbt deps	 ==> Install dependencies listed in packages.yml (e.g., dbt_utils)
+dbt clean	 ==> Remove compiled and target files (cleanup build artifacts)
+dbt run	 ==> Runs all models in your project (builds tables/views)
+dbt run --select model_name	 ==> Run a specific model only
+dbt run --select folder_name.*	 ==> Run all models inside a subfolder (like staging or marts)
+dbt run --select +model_name	 ==> Run a model and its upstream dependencies
+dbt run --select model_name+	 ==> Run a model and its downstream dependencies
+dbt run --select +model_name+	 ==> Run both upstream and downstream dependencies
+dbt run --models tag:mart	 ==> Run all models with a specific tag
+dbt run --full-refresh	 ==> Drop & rebuild incremental models (useful after schema change)
+dbt run --fail-fast	 ==> Stop execution on first model failure
+dbt test	 ==> Run all schema and data tests in project
+dbt test --select model_name	 ==> Run tests for a specific model only
+dbt test --select tag:core	 ==> Run tests for all models with a specific tag
+dbt test --select path:models/schema_test.yml	 ==> Run tests defined in a specific YAML file
+dbt test --exclude path:tests/*	 ==> Skip manually created data tests in /tests folder
+dbt test --store-failures	 ==> Save failing test records as tables for debugging
+dbt ls	 ==> List all resources (models, tests, macros, etc.)
+dbt ls --resource-type model	 ==> List only models
+dbt ls --resource-type test	 ==> List all tests detected by dbt
+dbt ls --select fct_listing_daily_metrics+	 ==> List model and its downstreams
+dbt source snapshot-freshness	 ==> Check freshness of defined sources
+dbt compile	 ==> Compile SQL files to /target/ folder without running
+dbt parse	 ==> Validate YAML and SQL parsing quickly
+dbt docs generate	 ==> Build dbt docs site locally
+dbt docs serve	 ==> Open docs UI in browser (lineage graph, metadata)
+dbt docs generate && dbt docs serve	 ==> Generate and open docs immediately
+dbt build	 ==> Runs models, tests, and snapshots all at once
+dbt build --select fct_listing_daily_metrics	 ==> Build and test a specific model
+dbt build --exclude path:tests/*	 ==> Build models but skip manual tests
+dbt clean && dbt deps && dbt run --full-refresh && dbt test	 ==> Re-run everything from scratch
+dbt run --select staging.*	 ==> Run only staging models
+dbt run --select fct_*	 ==> Run only fact models
+dbt run --select state:modified+	 ==> Run only models changed since last commit
+dbt test --select test_name	 ==> Run specific test only
+dbt debug	 ==> Debug Snowflake connection
