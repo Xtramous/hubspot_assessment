@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: fct_listing_daily_metrics
+    description: "Fact table containing daily listing metrics such as price, occupancy, and review details."
+    columns:
+      - name: listing_id
+        description: "Unique identifier for each listing."
+        tests:
+          - not_null
+
+      - name: date
+        description: "Date of the metric record."
+        tests:
+          - not_null
+
+      - name: is_available
+        description: "Boolean flag whether the listing is available."
+        tests:
+          - accepted_values:
+              values: [0, 1]
+
+      - name: is_booked
+        description: "Boolean flag whether the listing is booked."
+        tests:
+          - accepted_values:
+              values: [0, 1]
